@@ -1,0 +1,25 @@
+<van-notice-bar left-icon="volume-o" mode="closeable" scrollable text="饭没吃饱肚子可能会很饿~没吃饭影响我去上厕所吗？" />
+<van-tabs 
+active="{{active}}" 
+bind:change="tabsActive" 
+swipeable="{{swipeable}}" 
+ellipsis="{{ellipsis}}"
+title-active-color="red"
+animated="{{animated}}"
+>
+  <van-tab title="首页">
+    <component-home isShow="{{true}}"></component-home>
+  </van-tab>
+  <van-tab title="推荐">
+    <component-recomm isShow="{{true}}"></component-recomm>
+  </van-tab>
+  <van-tab title="资讯">
+    <component-information isShow="{{true}}"></component-information>
+  </van-tab>
+  <van-tab title="乡村振兴">
+    <component-rural isShow="{{true}}"></component-rural>
+  </van-tab>
+  <van-tab title="农产品">
+    <component-agricultural isShow="{{true}}"></component-agricultural>
+  </van-tab>
+</van-tabs>

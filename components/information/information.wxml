@@ -1,0 +1,15 @@
+<view wx:if="{{isShow}}">
+    <van-divider />
+    <van-skeleton title avatar row="3" loading="{{loading}}">
+        <view>实际内容</view>
+        <view>实际内容</view>
+        <view>实际内容</view>
+    </van-skeleton>
+    <van-divider />
+    <van-skeleton title avatar row="3" loading="{{loading}}">
+        <view>实际内容</view>
+        <view>实际内容</view>
+        <view>实际内容</view>
+    </van-skeleton>
+    <van-divider />
+</view>

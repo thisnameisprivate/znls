@@ -1,0 +1,98 @@
+<view class="container" wx:if="{{isShow}}">
+    <view class="activity">
+        <view class="activity-limit">
+            <view class="activity-text">
+                <van-tag mark type="danger" size="large">限时抢购</van-tag>
+            </view>
+            <van-image width="100%" height="100%" fit="fill" src="/images/activity-limit.jpg"></van-image>
+        </view>
+        <view class="products">
+            <view class="products-fruit">
+                <view class="activity-text">
+                    <van-tag mark type="danger" size="large">果苗优选</van-tag>
+                </view>
+                <van-image width="100%" height="100%" fit="fill" src="/images/products-fruit.jpg"></van-image>
+            </view>
+            <view class="products-people">
+                <view class="activity-text">
+                    <van-tag mark type="danger" size="large">农友圈</van-tag>
+                </view>
+                <van-image width="100%" height="100%" fit="fill" src="/images/products-people.jpg"></van-image>
+            </view>
+        </view>
+    </view>
+</view>
+<!-- 广告位  -->
+<view class="swiper-container">
+    <swiper
+            indicator-dots="{{indicatorDots}}"
+            autoplay="{{autoplay}}"
+            interval="{{interval}}"
+            duration="{{duration}}">
+        <block wx:for="{{background}}" wx:key="*this">
+            <swiper-item>
+                <image style="width:100%;" src="{{item}}"></image>
+            </swiper-item>
+        </block>
+    </swiper>
+</view>
+<!-- 产品种类 -->
+<van-tabs 
+active="{{productsActive}}" 
+title-active-color="#07c160" 
+animated="{{animated}}" 
+color="#07c160" 
+line-width="58px">
+  <van-tab title="蔬菜">
+        <component-vegetables isShow="{{true}}"></component-vegetables>
+  </van-tab>
+  <van-tab title="水果">
+        <component-fruit isShow="{{true}}"></component-fruit>
+  </van-tab>
+  <van-tab title="农用物资">
+        <component-supplies isShow="{{true}}"></component-supplies>
+  </van-tab>
+  <van-tab title="农业服务">
+        <component-agricultural isShow="{{true}}"></component-agricultural>
+  </van-tab>
+</van-tabs>
+<view class="title-tags">
+    <van-tag mark type="danger" size="large">最新政策<van-icon name="arrow" /></van-tag>
+</view>
+<view>
+    <van-divider />
+    <van-skeleton title avatar row="3" loading="{{loading}}">
+        <view>实际内容</view>
+        <view>实际内容</view>
+        <view>实际内容</view>
+    </van-skeleton>
+    <van-divider />
+    <van-skeleton title avatar row="3" loading="{{loading}}">
+        <view>实际内容</view>
+        <view>实际内容</view>
+        <view>实际内容</view>
+    </van-skeleton>
+    <van-divider />
+</view>
+<view class="title-tags">
+    <van-tag mark type="danger" size="large">技术分享<van-icon name="arrow" /></van-tag>
+</view>
+<view>
+    <van-divider />
+    <van-skeleton title avatar row="3" loading="{{loading}}">
+        <view>实际内容</view>
+        <view>实际内容</view>
+        <view>实际内容</view>
+    </van-skeleton>
+    <van-divider />
+    <van-skeleton title avatar row="3" loading="{{loading}}">
+        <view>实际内容</view>
+        <view>实际内容</view>
+        <view>实际内容</view>
+    </van-skeleton>
+    <van-divider />
+</view>
+<van-divider contentPosition="center" textColor="#07c160" border-color="#ffffff" fontSize="10">招商热线:138-8888-6666
+</van-divider>
+<van-divider contentPosition="center"  fontSize="10">我是有底线的~
+</van-divider>

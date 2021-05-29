@@ -1,0 +1,50 @@
+/**
+首页限时抢购活动版块布局
+ */
+.activity {
+    display: flex;
+    width:98%;
+    height:480rpx;
+    margin:auto;
+    flex-direction:row;
+}
+.activity-limit {
+    width:49%;
+    margin-right: 2%;
+    border-radius:8rpx;
+    overflow: hidden;
+}
+.products {
+    width:49%;
+    display:flex;
+    flex-direction:column;
+}
+.products-fruit {
+    height:235rpx;
+    margin-bottom:10rpx;
+    border-radius:8rpx;
+    overflow: hidden;
+}
+.products-people {
+    height:235rpx;
+    border-radius:8rpx;
+    overflow: hidden;
+}
+/**
+活动文本描述
+ */
+.activity-text {
+    position:absolute;
+    z-index:1;
+}
+/**
+广告位
+ */
+.swiper-container {
+    width:98%;
+    margin:auto;
+    margin-top:20rpx;
+}
+.title-tags {
+    margin-top:20rpx;
+}

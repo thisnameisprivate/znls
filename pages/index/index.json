@@ -1,0 +1,12 @@
+{
+  "usingComponents": {
+    "van-tab": "@vant/weapp/tab/index",
+    "van-tabs": "@vant/weapp/tabs/index",
+    "van-notice-bar": "@vant/weapp/notice-bar/index",
+    "component-home": "/components/home/home",
+    "component-recomm": "/components/recomm/recomm",
+    "component-information": "/components/information/information",
+    "component-rural": "/components/rural/rural",
+    "component-agricultural": "/components/Agricultural/Agricultural"
+  }
+}

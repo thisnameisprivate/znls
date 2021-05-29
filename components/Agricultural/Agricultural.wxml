@@ -1,0 +1,60 @@
+<view wx:if="{{isShow}}">
+    <van-card
+    num="999"
+    price="2.00"
+    desc="商品描述信息商品描述信息"
+    title="商品标题"
+    origin-price="10.00"
+    tag="热销"
+    lazy-load="{{lazyLoad}}"
+    thumb="{{imageURL}}">
+    <view slot="footer">
+        <van-button type="danger" round size="small">
+            加入购物车
+        </van-button>
+        \t
+        <van-button type="primary" round size="small">
+            直接购买
+        </van-button>
+    </view>
+    </van-card>
+
+    <van-card
+    num="999"
+    price="22.00"
+    desc="商品描述信息商品描述信息"
+    title="商品标题"
+    origin-price="32.00"
+    lazy-load="{{lazyLoad}}"
+    thumb="{{imageURL}}">
+    <view slot="footer">
+        <van-button type="danger" round size="small">
+            加入购物车
+        </van-button>
+        \t
+        <van-button type="primary" round size="small">
+            直接购买
+        </van-button>
+    </view>
+    </van-card>
+
+    <van-card
+    num="29"
+    price="19.98"
+    desc="商品描述信息商品描述信息"
+    title="商品标题"
+    origin-price="29.00"
+    tag="热销"
+    lazy-load="{{lazyLoad}}"
+    thumb="{{imageURL}}">
+    <view slot="footer">
+        <van-button type="danger" round size="small">
+            加入购物车
+        </van-button>
+        \t
+        <van-button type="primary" round size="small">
+            直接购买
+        </van-button>
+    </view>
+    </van-card>
+</view>

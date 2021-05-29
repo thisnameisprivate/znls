@@ -1,0 +1,28 @@
+<view class="swiper-container" wx:if="{{isShow}}">
+    <swiper
+            indicator-dots="{{indicatorDots}}"
+            autoplay="{{autoplay}}"
+            interval="{{interval}}"
+            duration="{{duration}}">
+        <block wx:for="{{background}}" wx:key="*this">
+            <swiper-item>
+                <image style="width:100%;" src="{{item}}"></image>
+            </swiper-item>
+        </block>
+    </swiper>
+</view>
+<view>
+    <van-divider />
+    <van-skeleton title avatar row="3" loading="{{loading}}">
+        <view>实际内容</view>
+        <view>实际内容</view>
+        <view>实际内容</view>
+    </van-skeleton>
+    <van-divider />
+    <van-skeleton title avatar row="3" loading="{{loading}}">
+        <view>实际内容</view>
+        <view>实际内容</view>
+        <view>实际内容</view>
+    </van-skeleton>
+    <van-divider />
+</view>

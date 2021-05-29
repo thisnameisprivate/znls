@@ -1,0 +1,8 @@
+<view class="container" wx:if="{{isShow}}">
+    <van-grid gutter="{{0}}" column-num="5" square>
+        <van-grid-item use-slot icon="photo-o" wx:for="{{vegetables}}">
+            <image src="{{item.src}}" style="width:40rpx; height:40rpx;"></image>
+            <view class="van-grid-item-font">{{item.title}}</view>
+        </van-grid-item>
+    </van-grid>
+</view>

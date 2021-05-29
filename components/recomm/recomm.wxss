@@ -1,0 +1,6 @@
+.section{
+    width:100%;
+}
+.van-grid-item-font {
+    font-size:30rpx;
+}

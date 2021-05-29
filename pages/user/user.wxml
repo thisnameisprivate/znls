@@ -1,0 +1,88 @@
+<van-skeleton avatar title avatar-size="128rpx" row="1" loading="{{loading}}">
+    <view class="user-container">
+    <view class="userinfo">
+        <block wx:if="{{canIUseOpenData}}" class="userinfo-opendata">
+            <view class="userinfo-avatar" bindtap="bindViewTap">
+                <open-data type="userAvatarUrl"></open-data>
+            </view>
+            <open-data type="userNickName"></open-data>
+        </block>
+        <block wx:elif="{{!hasUserInfo}}">
+            <button wx:if="{{canIUseGetUserProfile}}" bindtap="getUserProfile">获取头像昵称</button>
+            <button wx:elseif="{{canIUse}}" open-type="getUserInfo" bindgetuserinfo="getUserInfo">获取头像昵称</button>
+        </block>
+        <block wx:else>
+            <image bindtap="bindViewTap" class="userinfo-avatar" src="{{userInfo.avatarUrl}}" mode="cover"></image>
+            <text class="userinfo-nickname">{{userInfo.nickName}}</text>
+        </block>
+    </view>
+</view>
+</van-skeleton>
+<van-grid column-num="4" border="{{false}}">
+    <van-grid-item use-slot>
+        <van-icon name="shop-collect-o" size="26px" info="89" />
+        <view class="van-grid-item-font">商品收藏</view>
+    </van-grid-item>
+    <van-grid-item use-slot>
+        <van-icon name="records" size="26px" info="3" />
+        <view class="van-grid-item-font">店铺关注</view>
+    </van-grid-item>
+    <van-grid-item use-slot>
+        <van-icon name="goods-collect-o" size="26px" info="1" />
+        <view class="van-grid-item-font">喜欢的内容</view>
+    </van-grid-item>
+    <van-grid-item use-slot>
+        <van-icon name="eye-o" size="26px" info="99+" />
+        <view class="van-grid-item-font">浏览历史</view>
+    </van-grid-item>
+</van-grid>
+<van-grid column-num="5" border="{{false}}">
+    <van-grid-item icon="pending-payment" text="待付款" />
+    <van-grid-item icon="send-gift-o" text="待收货" />
+    <van-grid-item icon="chat-o" dot text="待评价" />
+    <van-grid-item icon="bill-o" text="退款/售后" />
+    <van-grid-item icon="balance-list-o" icon-color="#ee0a24" text="我的订单" />
+</van-grid>
+<van-divider />
+<view class="swiper-container">
+    <swiper
+            indicator-dots="{{indicatorDots}}"
+            autoplay="{{autoplay}}"
+            interval="{{interval}}"
+            duration="{{duration}}">
+        <block wx:for="{{background}}" wx:key="*this">
+            <swiper-item>
+                <image style="width:100%;" src="{{item}}"></image>
+            </swiper-item>
+        </block>
+    </swiper>
+</view>
+<view is-link class="index-bar">
+    <view bindtap="showPopup">
+        <view><van-icon name="location-o" size="16px" />　收货地址</view>
+        <view class="icon-right">
+            <van-icon name="plus" size="16px"/>
+        </view>
+    </view>
+    <view>
+        <view><van-icon name="question-o" size="16px" />　帮助/客服</view>
+        <view class="icon-right">
+            <van-icon name="arrow" size="16px"/>
+        </view>
+    </view>
+    <view>
+        <view><van-icon name="records" size="16px" />　意见/反馈</view>
+        <view class="icon-right">
+            <van-icon name="arrow" size="16px"/>
+        </view>
+    </view>
+    <view>
+        <view><van-icon name="setting-o" size="16px" />　设置</view>
+        <view class="icon-right">
+            <van-icon name="arrow" size="16px"/>
+        </view>
+    </view>
+</view>
+<van-popup round closeable safe-area-inset-bottom show="{{show}}" bindtap="onClose" position="bottom" custom-style="20%">
+    <van-area area-list="{{areaList}}" />
+</van-popup>
